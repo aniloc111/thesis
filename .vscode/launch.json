@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "read_certain_num_frames.py",
+            "console": "integratedTerminal",
+            "args": [
+                "-src_dir", "dataset_msvd",
+                "-rgboutfile", "5frame_list.txt",
+                "-flowxoutfile", "25flowx_list.txt",
+                "-flowyoutfile", "25flowy_list.txt",
+                "-rgb_prefix", "frame_",
+                "--flow_x_prefix", "flow_x_",
+                "--flow_y_prefix", "flow_y_",
+                "-modality", "rgb",
+                "-framenum", "5"
+            ]
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "..//Related Codes//Dataset//YouTube//YouTubeClips",
+                "dataset_msvd",
+                "--num_worker",
+                "8",
+                "--flow_type",
+                "frame",
+                "--ext",
+                "avi",
+                "--new_width",
+                "224",
+                "--new_height",
+                "224"
+            ]
+        }
+    ]
+}
